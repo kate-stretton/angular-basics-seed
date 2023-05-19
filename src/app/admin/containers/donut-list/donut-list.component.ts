@@ -6,8 +6,9 @@ import { Donut } from '../../models/donut.model';
   selector: 'app-donut-list',
   template: `
   <div>
-    <div>{{donut.name }}</div>
-    <div>{{donut.price }}</div>
+    <app-donut-card [donut]="donuts[0]"></app-donut-card>
+    <app-donut-card [donut]="donuts[1]"></app-donut-card>
+    <app-donut-card [donut]="donuts[2]"></app-donut-card>
   </div>
   `,
   styles: [
@@ -28,19 +29,19 @@ export class DonutListComponent implements OnInit {
       description: 'For the pure chocoholic'
       },
       {id: '13g98d',
-      name: 'Lemon',
-      icon: 'lemon',
+      name: 'Glazed fudge',
+      icon: 'glazed-fudge',
       price: 5,
-      description: 'Lemonade'
+      description: 'Glazed fudge'
       },
       {id: '3kd98s',
-      name: 'Raspberry',
-      icon: 'raspberry',
+      name: 'Caramel swirl',
+      icon: 'caramel-swirl',
       price: 5,
-      description: 'Raspberry donut'
+      description: 'Caramel swirl'
       } 
     ];
 
-    this.donut = this.donuts[0];
+    this.donut = this.donuts[1];
   }
 }
