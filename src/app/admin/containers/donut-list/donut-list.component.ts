@@ -12,13 +12,6 @@ import { Donut } from '../../models/donut.model';
           [donut]="donut"
         >
         </app-donut-card>
-
-        <ng-template ngFor [ngForOf]="donuts" let-donut let-i="index">
-          <app-donut-card 
-            [donut]="donut"
-          >
-          </app-donut-card>
-        </ng-template>
       </ng-container>
 
       <ng-template #nothing>
@@ -40,6 +33,7 @@ export class DonutListComponent implements OnInit {
         name: 'Just Chocolate',
         icon: 'just-chocolate',
         price: 119,
+        promo: 'limited',
         description: 'For the pure chocoholic.',
       },
       {
@@ -47,7 +41,7 @@ export class DonutListComponent implements OnInit {
         name: 'Glazed Fudge',
         icon: 'glazed-fudge',
         price: 129,
-        promo: true,
+        promo: 'new',
         description: 'Sticky perfection.',
       },
       {
@@ -56,6 +50,20 @@ export class DonutListComponent implements OnInit {
         icon: 'caramel-swirl',
         price: 129,
         description: 'Chocolate drizzled with caramel.',
+      },
+      {
+        id: 'kl30a8',
+        name: 'Sour Supreme',
+        icon: 'sour-supreme',
+        price: 159,
+        description: 'For the sour advocate.',
+      },
+      {
+        id: 'f9b1w8',
+        name: 'Zesty lemon',
+        icon: 'zesty-lemon',
+        price: 168,
+        description: 'Delicious lucious lemon.',
       },
     ];
   }
