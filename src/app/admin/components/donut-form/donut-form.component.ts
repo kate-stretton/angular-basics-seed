@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
     <form class="donut-form" #form="ngForm">
       <label>
         <span>Name</span>
-        <input type="text" name="name" class="input" required ngModel/>
+        <input type = "text" name = "name" class = "input" required ngModel #name = "ngModel"/>
       </label>
 
       <label>
@@ -45,7 +45,7 @@ import { Component, OnInit } from '@angular/core';
           ngModel></textarea>
       </label>
 
-      <pre>{{form.form.status | json}}</pre>
+      <pre>{{form.value | json}}</pre>
     </form>
   `,
   styles: [
