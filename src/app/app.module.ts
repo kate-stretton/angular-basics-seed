@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 // containers
 import { AppComponent } from './app.component';
@@ -12,7 +13,7 @@ import { DonutFormComponent } from './admin/components/donut-form/donut-form.com
 
 @NgModule({
   declarations: [AppComponent, DonutListComponent, DonutCardComponent, DonutSingleComponent, DonutFormComponent],
-  imports: [BrowserModule],
+  imports: [BrowserModule, FormsModule],
   exports: [DonutListComponent, DonutSingleComponent],
   bootstrap: [AppComponent],
 })
