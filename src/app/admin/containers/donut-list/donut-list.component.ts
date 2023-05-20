@@ -1,48 +1,46 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { Donut } from '../../models/donut.model';
 
 @Component({
   selector: 'app-donut-list',
   template: `
-  <div>
-    <app-donut-card [donut]="donuts[0]"></app-donut-card>
-    <app-donut-card [donut]="donuts[1]"></app-donut-card>
-    <app-donut-card [donut]="donuts[2]"></app-donut-card>
-  </div>
+    <div>
+      <app-donut-card [donut]="donuts[0]"></app-donut-card>
+      <app-donut-card [donut]="donuts[1]"></app-donut-card>
+      <app-donut-card [donut]="donuts[2]"></app-donut-card>
+    </div>
   `,
-  styles: [
-    
-  ]
+  styles: [],
 })
 export class DonutListComponent implements OnInit {
-  donut!: Donut; 
   donuts!: Donut[];
 
-  constructor(){}
+  constructor() {}
 
   ngOnInit(): void {
     this.donuts = [
-      {id: '1f1e2t',
-      name: 'Just Chocolate',
-      icon: 'just-chocolate',
-      price: 5,
-      description: 'For the pure chocoholic'
+      {
+        id: 'y8z0As',
+        name: 'Just Chocolate',
+        icon: 'just-chocolate',
+        price: 119,
+        description: 'For the pure chocoholic.',
       },
-      {id: '13g98d',
-      name: 'Glazed fudge',
-      icon: 'glazed-fudge',
-      price: 5,
-      description: 'Glazed fudge'
+      {
+        id: '3u98Kl',
+        name: 'Glazed Fudge',
+        icon: 'glazed-fudge',
+        price: 129,
+        description: 'Sticky perfection.',
       },
-      {id: '3kd98s',
-      name: 'Caramel swirl',
-      icon: 'caramel-swirl',
-      price: 5,
-      description: 'Caramel swirl'
-      } 
+      {
+        id: 'ae098s',
+        name: 'Caramel Swirl',
+        icon: 'caramel-swirl',
+        price: 129,
+        description: 'Chocolate drizzled with caramel.',
+      },
     ];
-
-    this.donut = this.donuts[1];
   }
 }
