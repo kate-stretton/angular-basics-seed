@@ -7,9 +7,10 @@ import { Donut } from '../../models/donut.model';
   template: `
     <div>
       <ng-container *ngIf="donuts.length; else nothing">
-        <app-donut-card [donut]="donuts[0]"></app-donut-card>
-        <app-donut-card [donut]="donuts[1]"></app-donut-card>
-        <app-donut-card [donut]="donuts[2]"></app-donut-card> 
+        <app-donut-card 
+        *ngFor="let donut of donuts"
+        [donut]="donut">
+      </app-donut-card>
       </ng-container>
 
       <ng-template #nothing>
