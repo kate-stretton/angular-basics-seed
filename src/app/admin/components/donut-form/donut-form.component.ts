@@ -7,7 +7,7 @@ import { NgForm } from '@angular/forms';
     <form class="donut-form" (ngSubmit)="handleSubmit(form)" #form="ngForm">
       <label>
         <span>Name</span>
-        <input type = "text" name = "name" class = "input" required ngModel #name = "ngModel"/>
+        <input type = "text" name = "name" class = "input" required ngModel [ngModelOptions]="{updateOn: 'blur'}" #name = "ngModel"/>
         <ng-container *ngIf="name.invalid && name.touched">
           <div class="donut-form-error" *ngIf="name.errors?.minlength">
             Ninimum length of a name is 5!
