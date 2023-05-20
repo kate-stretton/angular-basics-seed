@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Donut } from '../../models/donut.model';
+import { DonutService } from '../../services/donut.service';
 
 @Component({
   selector: 'app-donut-list',
@@ -24,48 +25,10 @@ import { Donut } from '../../models/donut.model';
 export class DonutListComponent implements OnInit {
   donuts!: Donut[];
 
-  constructor() {}
+  constructor(private donutService: DonutService) {} 
 
   ngOnInit(): void {
-    this.donuts = [
-      {
-        id: 'y8z0As',
-        name: 'Just Chocolate',
-        icon: 'just-chocolate',
-        price: 119,
-        promo: 'limited',
-        description: 'For the pure chocoholic.',
-      },
-      {
-        id: '3u98Kl',
-        name: 'Glazed Fudge',
-        icon: 'glazed-fudge',
-        price: 129,
-        promo: 'new',
-        description: 'Sticky perfection.',
-      },
-      {
-        id: 'ae098s',
-        name: 'Caramel Swirl',
-        icon: 'caramel-swirl',
-        price: 129,
-        description: 'Chocolate drizzled with caramel.',
-      },
-      {
-        id: 'kl30a8',
-        name: 'Sour Supreme',
-        icon: 'sour-supreme',
-        price: 159,
-        description: 'For the sour advocate.',
-      },
-      {
-        id: 'f9b1w8',
-        name: 'Zesty lemon',
-        icon: 'zesty-lemon',
-        price: 168,
-        description: 'Delicious lucious lemon.',
-      },
-    ];
+    this.donuts = this.donutService.donuts;
   }
 
   trackById(index: number, value: Donut) {
