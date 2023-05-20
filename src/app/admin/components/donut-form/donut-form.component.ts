@@ -74,7 +74,7 @@ import { Component, OnInit } from '@angular/core';
           }
         }
       }
-      &-errors {
+      &-error {
         font-size: 12px;
         color: #e66262;
       }
