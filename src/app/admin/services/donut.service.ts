@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
-import { catchError, map, of, tap, throwError } from 'rxjs';
+import { catchError, map, of, retry, tap, throwError } from 'rxjs';
 
 import { Donut } from '../models/donut.model';
 
@@ -22,6 +22,7 @@ export class DonutService {
       tap((donuts) => {
         this.donuts = donuts;
       }),
+      retry(2),
       catchError(this.handleError)
     );
   }
@@ -77,7 +78,7 @@ export class DonutService {
         if (err.error instanceof ErrorEvent) {
           console.warn('Client', err.message)
         } else {
-          console.warn('Client', err.status)
+          console.warn('Server', err.status)
         }
         return throwError(() => new Error(err.message));
     }
