@@ -31,40 +31,18 @@
       "description": "Delicious lucious lemon."
     },
     {
-      "name": "dfgasd",
-      "icon": "glazed-fudge",
-      "price": 123,
-      "description": "hjkl",
-      "id": "2hKbbH4"
-    },
-    {
-      "name": "Sour Supreme",
-      "icon": "zesty-lemon",
-      "price": 159,
-      "description": "For the sour advocate.",
-      "id": "hZprCU9"
-    },
-    {
-      "name": "Sour Supreme",
-      "icon": "zesty-lemon",
-      "price": 159,
-      "description": "For the sour advocate.",
-      "id": "XmB2ObI"
-    },
-    {
-      "name": "Sour Supremem",
+      "id": "123ghj",
+      "name": "Sour supreme",
       "icon": "sour-supreme",
-      "price": 159,
-      "description": "For the sour advocate.",
-      "id": "EJvD_Sw"
+      "price": 200,
+      "description": "Sour."
     },
     {
-      "name": "Sour Supreme",
-      "icon": "sour-supreme",
-      "price": 159,
-      "promo": "new",
-      "description": "For the sour advocate.",
-      "id": "QOzfcEa"
+      "id": "f9b1w8",
+      "name": "Strawberry glaze",
+      "icon": "strawberry-glaze",
+      "price": 168,
+      "description": "Strawberry."
     }
   ]
 }
