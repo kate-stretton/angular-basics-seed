@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
 import { Donut } from '../models/donut.model';
 
 @Injectable({
@@ -7,21 +9,22 @@ import { Donut } from '../models/donut.model';
 export class DonutService {
   private donuts: Donut[] = [];
 
-  constructor() { }
+  constructor(private http: HttpClient) {}
 
   read() {
-    return this.donuts;
+    return this.http.get<Donut[]>(`/api/donuts`)
+    // return this.donuts;
   }
 
-  readOne(id: string) {
-    const donut = this.read().find((donut: Donut) => donut.id === id)
+  // readOne(id: string) {
+  //   const donut = this.read().find((donut: Donut) => donut.id === id)
 
-    if (donut) {
-      return donut;
-    }
+  //   if (donut) {
+  //     return donut;
+  //   }
     
-    return {name: '', icon: '', price: 0, description: ''}
-  }
+  //   return {name: '', icon: '', price: 0, description: ''}
+  // }
 
   create(payload: Donut) {
     this.donuts = [...this.donuts, payload]
