@@ -25,10 +25,11 @@
     },
     {
       "id": "kl30a8",
-      "name": "Sour Supreme",
-      "icon": "sour-supreme",
-      "price": 159,
-      "description": "For the sour advocate."
+      "name": "Sour Supreme123",
+      "icon": "vanilla-sundae",
+      "price": 123,
+      "promo": "limited",
+      "description": "For the sour advocate.12"
     },
     {
       "id": "f9b1w8",
@@ -43,6 +44,35 @@
       "price": 123,
       "description": "hjkl",
       "id": "2hKbbH4"
+    },
+    {
+      "name": "Sour Supreme",
+      "icon": "zesty-lemon",
+      "price": 159,
+      "description": "For the sour advocate.",
+      "id": "hZprCU9"
+    },
+    {
+      "name": "Sour Supreme",
+      "icon": "zesty-lemon",
+      "price": 159,
+      "description": "For the sour advocate.",
+      "id": "XmB2ObI"
+    },
+    {
+      "name": "Sour Supremem",
+      "icon": "sour-supreme",
+      "price": 159,
+      "description": "For the sour advocate.",
+      "id": "EJvD_Sw"
+    },
+    {
+      "name": "Sour Supreme",
+      "icon": "sour-supreme",
+      "price": 159,
+      "promo": "new",
+      "description": "For the sour advocate.",
+      "id": "QOzfcEa"
     }
   ]
 }

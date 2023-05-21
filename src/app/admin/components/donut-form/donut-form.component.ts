@@ -83,7 +83,7 @@ import { Donut } from '../../models/donut.model';
       </label>
 
       <button type="button" class="btn btn--green" (click)="handleCreate(form)">Create</button>
-      <button type="button" class="btn btn--green" [disabled]="form.untouched" (click)="handleCreate(form)">Update</button>
+      <button type="button" class="btn btn--green" [disabled]="form.untouched" (click)="handleUpdate(form)">Update</button>
       <button type="button" class="btn btn--green" (click)="handleDelete()">Delete</button>
       <button type="button" class="btn btn--grey" (click)="form.resetForm()">Reset form</button>
 
