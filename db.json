@@ -24,14 +24,6 @@
       "description": "Chocolate drizzled with caramel."
     },
     {
-      "id": "kl30a8",
-      "name": "Sour Supreme123",
-      "icon": "vanilla-sundae",
-      "price": 123,
-      "promo": "limited",
-      "description": "For the sour advocate.12"
-    },
-    {
       "id": "f9b1w8",
       "name": "Zesty lemon",
       "icon": "zesty-lemon",
