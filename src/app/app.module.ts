@@ -14,8 +14,13 @@ import { DonutCardComponent } from './admin/components/donut-card/donut-card.com
 import { DonutFormComponent } from './admin/components/donut-form/donut-form.component';
 
 export const routes: Routes = [
-  { path: '', component: DonutListComponent },
-  { path: 'donut', component: DonutSingleComponent}
+  { 
+    path: 'admin', 
+    children: [
+      { path: 'donuts', component: DonutListComponent },
+      { path: 'donut', component: DonutSingleComponent } 
+    ]
+  }
 ];
 
 @NgModule({
