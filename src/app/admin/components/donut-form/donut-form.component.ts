@@ -84,6 +84,7 @@ import { Donut } from '../../models/donut.model';
 
       <button type="button" class="btn btn--green" (click)="handleCreate(form)">Create</button>
       <button type="button" class="btn btn--green" [disabled]="form.untouched" (click)="handleCreate(form)">Update</button>
+      <button type="button" class="btn btn--green" (click)="handleDelete()">Delete</button>
       <button type="button" class="btn btn--grey" (click)="form.resetForm()">Reset form</button>
 
       <div class="donut-form-working" *ngIf="form.valid && form.submitted">
@@ -127,6 +128,7 @@ export class DonutFormComponent {
   
   @Output() create = new EventEmitter<Donut>();
   @Output() update = new EventEmitter<Donut>();
+  @Output() delete = new EventEmitter<Donut>();
 
   icons: string[] =[
     'caramel-swirl',
@@ -156,4 +158,9 @@ export class DonutFormComponent {
     }
   }
 
+  handleDelete() {
+    if (confirm(`Really delete ${this.donut.name}?`)) {
+      this.delete.emit({...this.donut})  
+    }
+  }
 }
