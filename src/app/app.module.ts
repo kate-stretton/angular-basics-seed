@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
 // containers
@@ -12,9 +13,14 @@ import { DonutSingleComponent } from './admin/containers/donut-single/donut-sing
 import { DonutCardComponent } from './admin/components/donut-card/donut-card.component';
 import { DonutFormComponent } from './admin/components/donut-form/donut-form.component';
 
+export const routes: Routes = [
+  { path: '', component: DonutListComponent },
+  { path: 'donut', component: DonutSingleComponent}
+];
+
 @NgModule({
   declarations: [AppComponent, DonutListComponent, DonutCardComponent, DonutSingleComponent, DonutFormComponent],
-  imports: [BrowserModule, FormsModule, HttpClientModule],
+  imports: [BrowserModule, FormsModule, HttpClientModule, RouterModule.forRoot(routes)],
   exports: [DonutListComponent, DonutSingleComponent],
   bootstrap: [AppComponent],
 })
